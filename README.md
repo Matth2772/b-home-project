@@ -1,9 +1,14 @@
 # b-home-project
 
-Startup:
+## Startup:
 
-npm install
+* `npm install`
 
-npm run start
+* `npm run start`
 
-go to http://localhost:8080/
+* Go to http://localhost:8080/
+
+## Snapshot Tests:
+
+* `npm run test`
+
