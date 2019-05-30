@@ -11,7 +11,7 @@ class Results extends Component {
 
   renderResults() {
     const { results } = this.props;
-    return results.map(result => <Result result={result} />);
+    return results.map(result => <Result result={result} key={result.objectID} />);
   }
 
   render() {

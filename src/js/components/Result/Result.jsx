@@ -22,7 +22,12 @@ function Result(props) {
 }
 
 Result.propTypes = {
-  result: PropTypes.objectOf(PropTypes.string),
+  result: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.string,
+    points: PropTypes.number,
+    url: PropTypes.string,
+  }),
 };
 
 Result.defaultProps = {
