@@ -34,7 +34,7 @@ Result.defaultProps = {
   result: {
     title: '',
     author: '',
-    points: '',
+    points: 0,
     url: '',
   },
 };

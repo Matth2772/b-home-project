@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result rendering well 1`] = `
+<div
+  className="list-group-item"
+  disabled={false}
+  onClick={[Function]}
+>
+  <a
+    href=""
+  >
+    
+  </a>
+   
+  -
+   
+  
+   
+  -
+   
+  0
+</div>
+`;

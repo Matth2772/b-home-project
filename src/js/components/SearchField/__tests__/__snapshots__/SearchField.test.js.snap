@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchField rendering well 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+    htmlFor="search"
+  >
+    Hacker News Search
+  </label>
+  <input
+    className="form-control"
+    id="search"
+    onChange={[Function]}
+    placeholder="Search news"
+    type="email"
+  />
+</div>
+`;
