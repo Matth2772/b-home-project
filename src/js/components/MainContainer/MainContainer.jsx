@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
+import Alert from 'react-bootstrap/Alert';
 import SearchField from '../SearchField/SearchField';
 import Results from '../Results/Results';
 import HackerNewsService from '../../services/HackerNews.service';
@@ -14,6 +15,7 @@ class MainContainer extends Component {
     };
 
     this.search = this.search.bind(this);
+    this.renderResults = this.renderResults.bind(this);
   }
 
   search(q) {
@@ -44,13 +46,37 @@ class MainContainer extends Component {
     };
   }
 
-  render() {
-    const { results } = this.state;
+  renderResults() {
+    const { results, query, requestsOut } = this.state;
 
+    if (requestsOut > 0) {
+      return (
+        <Alert variant="primary">
+          Looking for your news ...
+        </Alert>
+      );
+    }
+
+    if (results.length > 0) {
+      return <Results results={results} />;
+    }
+
+    if (results.length < 1 && query !== '' && requestsOut === 0) {
+      return (
+        <Alert variant="danger">
+          No news matching your query :/
+        </Alert>
+      );
+    }
+
+    return null;
+  }
+
+  render() {
     return (
       <Container>
         <SearchField search={this.search} />
-        <Results results={results} />
+        {this.renderResults()}
       </Container>
     );
   }
