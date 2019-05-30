@@ -1,6 +1,10 @@
 # b-home-project
 
-## Startup:
+## Setup:
+
+* `git clone git@github.com:Matth2772/b-home-project.git`
+
+* `cd b-home-project/`
 
 * `npm install`
 
